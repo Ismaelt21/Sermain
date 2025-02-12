@@ -10,7 +10,7 @@ const AboutUs = () => {
         </h2>
         
         <div className="grid md:grid-cols-2 gap-12 items-stretch">
-          {/* Misión */}
+          {/*_Misión_*/}
           <div className="bg-white rounded-xl shadow-xl overflow-hidden transition-transform duration-300 hover:scale-105">
             <div className="p-8">
               <div className="flex items-center mb-6">
