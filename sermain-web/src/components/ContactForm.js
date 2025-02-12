@@ -12,13 +12,7 @@ const ContactUs = () => {
         {/* Tarjeta Principal */}
         <div className="bg-white rounded-xl shadow-xl p-8 mb-12">
           <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="w-48 h-48 rounded-full overflow-hidden bg-blue-100 flex items-center justify-center">
-              <img 
-                src="/api/placeholder/192/192" 
-                alt="Henry Toala" 
-                className="w-full h-full object-cover"
-              />
-            </div>
+            
             <div>
               <h3 className="text-2xl font-bold text-blue-800 mb-2">Henry Toala</h3>
               <p className="text-lg text-gray-600 mb-4">Tecnólogo Eléctrico</p>
