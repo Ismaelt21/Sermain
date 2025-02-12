@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const Header = ({ onServicesClick, onAboutUsClick, onContactClick }) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar el menú hamburguesa
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,7 +60,10 @@ const Header = ({ onServicesClick, onAboutUsClick, onContactClick }) => {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <button className="p-2">
+            <button
+              className="p-2"
+              onClick={() => setIsMenuOpen(!isMenuOpen)} // Alterna el estado del menú hamburguesa
+            >
               <svg
                 className="h-6 w-6"
                 fill="none"
@@ -76,6 +80,30 @@ const Header = ({ onServicesClick, onAboutUsClick, onContactClick }) => {
             </button>
           </div>
         </div>
+
+        {/* Mobile Navigation (menú hamburguesa) */}
+        {isMenuOpen && (
+          <div className="md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg p-4 space-y-4">
+            <button
+              onClick={onServicesClick}
+              className="w-full text-left hover:text-blue-500 transition-colors duration-300 text-lg font-medium"
+            >
+              Servicios
+            </button>
+            <button
+              onClick={onAboutUsClick}
+              className="w-full text-left hover:text-blue-500 transition-colors duration-300 text-lg font-medium"
+            >
+              Nosotros
+            </button>
+            <button
+              onClick={onContactClick}
+              className="w-full text-left hover:text-blue-500 transition-colors duration-300 text-lg font-medium"
+            >
+              Contacto
+            </button>
+          </div>
+        )}
       </div>
     </header>
   );
