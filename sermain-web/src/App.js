@@ -24,7 +24,10 @@ function App() {
         onAboutUsClick={() => scrollToSection(aboutUsRef)} 
         onContactClick={() => scrollToSection(contactFormRef)} 
       />
-      <HeroSection />
+      <HeroSection 
+        onContactClick={() => scrollToSection(contactFormRef)} 
+        onServicesClick={() => scrollToSection(servicesRef)} 
+      />
       <div ref={servicesRef}>
         <Services />
       </div>

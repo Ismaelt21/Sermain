@@ -2,7 +2,7 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-const HeroSection = () => {
+const HeroSection = ({ onContactClick, onServicesClick }) => {
   const slides = [
     {
       image: '/Header_maq.webp',
@@ -56,7 +56,6 @@ const HeroSection = () => {
               style={{
                 backgroundImage: `url(${slide.image})`,
                 backgroundSize: 'cover',
-                //animation: 'zoomEffect 8s infinite alternate'
               }}
             />
 
@@ -72,10 +71,18 @@ const HeroSection = () => {
                   {slide.subtitle}
                 </p>
                 <div className="space-x-4">
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
+                  {/* Botón Contactar con scroll */}
+                  <button
+                    onClick={onContactClick}
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                  >
                     Contactar
                   </button>
-                  <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-900 transition-all duration-300">
+                  {/* Botón Ver Servicios con scroll */}
+                  <button
+                    onClick={onServicesClick}
+                    className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-900 transition-all duration-300"
+                  >
                     Ver Servicios
                   </button>
                 </div>
@@ -84,39 +91,6 @@ const HeroSection = () => {
           </div>
         ))}
       </Carousel>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 animate-bounce">
-        <div className="w-8 h-12 rounded-full border-2 border-white flex justify-center pt-2">
-          <div className="w-1 h-3 bg-white rounded-full animate-scrollMouse" />
-        </div>
-      </div>
-
-      <style jsx>{`
-        @keyframes zoomEffect {
-          from { transform: scale(1); }
-          to { transform: scale(1.1); }
-        }
-        
-        @keyframes scrollMouse {
-          0% { transform: translateY(0); opacity: 1; }
-          100% { transform: translateY(10px); opacity: 0; }
-        }
-
-        .custom-dot-list {
-          bottom: 20px !important;
-        }
-
-        .custom-dot-list button {
-          border: 2px solid white;
-          background: transparent;
-          margin: 0 5px;
-        }
-
-        .custom-dot-list .react-multi-carousel-dot--active button {
-          background: white;
-        }
-      `}</style>
     </section>
   );
 };
