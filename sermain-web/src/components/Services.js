@@ -4,7 +4,7 @@ const services = [
   {
     title: 'Mecánico',
     description: 'Mantenimiento de maquinaria mecánica, incluyendo inspección, reparación y actualización de equipos industriales. Ofrecemos soluciones preventivas para evitar fallos en la maquinaria.',
-    img: '/mecanico.jpg',
+    img: '/Mecanico.jpg',
     icon: '/mecicon.jpg'
   },
   {
