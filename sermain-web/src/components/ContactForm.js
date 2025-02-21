@@ -9,19 +9,6 @@ const ContactUs = () => {
           Contáctanos
         </h2>
 
-        {/* Tarjeta Principal */}
-        <div className="bg-white rounded-xl shadow-xl p-8 mb-12">
-          <div className="flex flex-col md:flex-row items-center gap-8">
-            
-            <div>
-              <h3 className="text-2xl font-bold text-blue-800 mb-2">Henry Toala</h3>
-              <p className="text-lg text-gray-600 mb-4">Tecnólogo Eléctrico</p>
-              <p className="text-gray-600 italic mb-4">
-                "Comprometidos con soluciones eléctricas innovadoras y eficientes"
-              </p>
-            </div>
-          </div>
-        </div>
 
         {/* Grid de Información de Contacto */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
