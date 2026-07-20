@@ -18,7 +18,7 @@ const Header = ({ onServicesClick, onAboutUsClick, onPlansClick, onContactClick 
     <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 shadow-sm backdrop-blur-md' : 'bg-[#062653]/85'}`}>
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8">
         <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-3" aria-label="Ir al inicio">
-          <img src="/Sermainv2.png" alt="Sermain" className="h-14 w-auto object-contain" />
+          <img src="/sermain-wordmark.png" alt="Sermain" className="h-10 w-auto object-contain sm:h-11" />
           <span className={`hidden border-l pl-3 text-xs font-bold uppercase tracking-[0.18em] sm:block ${isScrolled ? 'border-slate-200 text-slate-500' : 'border-white/30 text-white/80'}`}>
             Mantenimiento y montaje industrial
           </span>
